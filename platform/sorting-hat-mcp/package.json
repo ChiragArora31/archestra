@@ -1,6 +1,6 @@
 {
   "name": "@archestra/sorting-hat-mcp",
-  "version": "1.2.57",
+  "version": "1.2.59",
   "description": "First-party Sorting Hat MCP tools for tool-call sorting and Patronus authorization.",
   "type": "module",
   "private": true,

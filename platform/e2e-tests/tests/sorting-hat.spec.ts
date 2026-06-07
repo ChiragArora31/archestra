@@ -137,7 +137,9 @@ test.describe("Sorting Hat MCP gateway flow", () => {
     expect(body.result.content[0].text).toBe("probe complete");
     expect(body.result._meta.sortingHat.house).toBe("gryffindor");
     expect(body.result._meta.sortingHat.monologue.length).toBeGreaterThan(0);
-    expect(body.result._meta.sortingHat.floo.greenFlameParticles).toBe(true);
+    expect(body.result._meta.sortingHat.floo.particles.length).toBeGreaterThan(
+      0,
+    );
   });
 
   test("streams Sorting Hat and Quidditch progress events", async ({

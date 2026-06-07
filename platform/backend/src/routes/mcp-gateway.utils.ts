@@ -1,14 +1,6 @@
 import { createHash } from "node:crypto";
 import type { IncomingMessage } from "node:http";
 import {
-  authorizeSortedTool,
-  buildSortingHatMeta,
-  flooTravel,
-  type PatronusCastResult,
-  type SortingHatSortResult,
-  sortTool,
-} from "@archestra/sorting-hat-mcp";
-import {
   ARCHESTRA_MCP_CATALOG_ID,
   hasArchestraTokenPrefix,
   isAgentTool,
@@ -20,6 +12,14 @@ import {
   TOOL_RUN_TOOL_SHORT_NAME,
   TOOL_SEARCH_TOOLS_SHORT_NAME,
 } from "@archestra/shared";
+import {
+  authorizeSortedTool,
+  buildSortingHatMeta,
+  flooTravel,
+  type PatronusCastResult,
+  type SortingHatSortResult,
+  sortTool,
+} from "@archestra/sorting-hat-mcp";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import {

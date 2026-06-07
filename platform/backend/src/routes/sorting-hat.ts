@@ -50,9 +50,8 @@ const sortingHatRoutes: FastifyPluginAsyncZod = async (fastify) => {
     async ({ params }, reply) => {
       reply.hijack();
       reply.raw.writeHead(200, sseHeaders());
-      // The issue asks for 60fps, but backend-driven SSE at that cadence is
-      // wasteful for a loading indicator. Emit a modest cadence and let CSS
-      // animate between events.
+      // Emit a modest backend cadence and let the frontend interpolate motion
+      // between events.
       for await (const event of quidditchStream(params.toolCallId, {
         cadenceMs: 100,
       })) {

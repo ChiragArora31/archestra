@@ -368,7 +368,7 @@ export async function createSortingHatMcpServer(): Promise<SortingHatMcpServer> 
   const { McpServer } = await import("@modelcontextprotocol/sdk/server/mcp.js");
   const server = new McpServer({
     name: "sorting-hat-mcp",
-    version: "1.2.57",
+    version: "1.2.59",
   }) as SortingHatMcpServer;
 
   server.tool(

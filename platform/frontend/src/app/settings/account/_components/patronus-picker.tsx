@@ -25,7 +25,7 @@ const PATRONUS_FORMS = [
   "wildcat",
 ] as const;
 
-const STORAGE_KEY = "archestra-patronus-form";
+const STORAGE_KEY = "patronus-form";
 
 export function PatronusPicker() {
   const [form, setForm] = useState<(typeof PATRONUS_FORMS)[number]>("stag");
